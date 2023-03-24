@@ -34,13 +34,12 @@ session_start();
 include("connection.php");
 include("functions.php");
 
-//$user_data = check_login($con);
+$user_data = check_login($con);
  $query = "select* from projects";
  $result = $con -> query($query);
 
  if($result -> num_rows > 0){
     while($row = $result -> fetch_assoc()){
-        $del_query = "DELETE FROM projects WHERE project_id = $row ";
         echo"<tr>
         <td>" . $row["project_id"] ."</td>
         <td>" . $row["project_name"] ."</td>
