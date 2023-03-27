@@ -3,6 +3,7 @@ session_start();
   include("connection.php");
   include("functions.php");
 
+  //if($user_data = check_login($con)){
 if($_SERVER['REQUEST_METHOD'] == "POST"){
     $Project_Name = $_POST['Project_Name'];
     $Project_Manager = $_POST['Project_Manager'];
@@ -20,7 +21,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
         echo"please enter some valid information";
     }
 }
-
+  //}
 ?>
 <html>
     <head>

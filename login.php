@@ -35,8 +35,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 <body>
 <form action="" method="POST">
     <h1>login</h1>
-    <input type="text" name="Name"><br><br>
-    <input type="text" name="password"><br><br>
+    Enter your name<input type="text" name="Name"><br><br>
+    Enter your password<input type="text" name="password"><br><br>
     <button type="text" value="Login">login</button><br><br>
     <a href="sign_up.php">click to sign up</a><br><br>
 </form>

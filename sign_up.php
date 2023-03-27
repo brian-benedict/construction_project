@@ -25,9 +25,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 <body>
 <form action="" method="post">
     <h1>sign up</h1>
-    <input type="text" name="Name"><br><br>
-    <input type="text" name="password"><br><br>
-    <input type="text" name="description"><br><br>
+    Enter your name <input type="text" name="Name"><br><br>
+    Enter your password <input type="text" name="password"><br><br>
+    Enter you description <input type="text" name="description"><br><br>
     <button type="text" value="sign up">sign up</button><br><br>
     <a href="login.php">click to Login</a><br><br>
 </form>

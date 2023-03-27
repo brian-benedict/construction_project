@@ -1,30 +1,13 @@
-<html>
-    <head>
-        <title></title>
-        <style>
-            table{
-                border-collapse: collapse;
-                width: 100%;
-                font-family: monospace;
-                color: #eb4034;
-                font-size: 25px;
-                text-align: left;
-            }
-            th{
-                background-color: #eb4034;
-                color: white;
+<?php
+session_start();
+include("connection.php");
+//include("functions.php");
 
-            }
-            tr:nth-child(even){
-                background-color: #ededed;
-            }
-        </style>
-    </head>
-    <body>
-<div>
-    <button> <a href="projects_data_download.php" target="_blank">export data</a></button>
-</div>
-    <table>
+header('Content-Type: application/vnd-ms-excel');
+$filename="projects_data-" .date('Y/m/d H:i:s'). ".xls";
+header("Content-Disposition: attachment; filename=\"$filename\" ");
+?>
+<table>
         <tr>
             <th>number</th>
             <th>project Name</th>
@@ -33,9 +16,7 @@
             <th>number of workers</th>
             <th>Amount allocated</th>
         </tr><?php 
-session_start();
-include("connection.php");
-include("functions.php");
+
 
 //$user_data = check_login($con);
  $query = "select* from projects";
@@ -57,6 +38,4 @@ include("functions.php");
     echo"no results";
  }
 ?>
-    </table>    
-    </body>
-</html>
+    </table>
